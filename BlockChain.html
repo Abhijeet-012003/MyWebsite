@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&family=Roboto+Mono&display=swap" rel="stylesheet"> 
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="preloader"></div>
+
+    <style>
+        
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'popins', sans-serif;
+            background-color: #fff
+        }
+
+        html{
+            margin-right: 10%;
+        }
+
+        .container{
+            position: relative;
+        }
+
+        .container img{
+            margin-top: 10%;
+            margin-right: 5%;
+            float: right;
+            width: 45%;
+            height: 50vh;
+        }
+
+        h1{
+            position: absolute;
+            color: #000;
+            left: 15%;
+            margin-top: 15%;
+            font-size: 50px;
+        }
+
+        .container span{
+            color: #ff3753;
+        }
+        .container a{
+            position: absolute;
+            margin-top: 28%;
+            left: 18%;
+        }
+
+        .container a .common-btn{
+            padding-top: 10px;
+            padding-bottom: 10px;
+            padding-left: 30px;
+            padding-right: 30px;
+            background-color: #fff;
+            color: #ff3753;
+            border: 0.5px #ff3753 solid ;
+            border-radius: 20px;
+            box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+            transition: 0.5s;
+            font-size: large;
+            font-weight: 50;
+            font-family: 'Mochiy Pop P One', sans-serif;
+        }
+
+        .container a :hover{
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+        }
+
+        #preloader{
+            background: #fff url(Images/lazy3.gif) no-repeat center center;
+            background-size: 20%;
+            height: 100vh;
+            width: 100%;
+            position: fixed;
+            z-index: 100;
+        }
+
+        .Down-Arrow{
+            width: 30%;
+            height: 30%;
+            margin-left: 35%;
+            margin-top: 2%;            
+        }
+        
+        .fade-left{
+            margin-top: 10%;
+            margin-left: 3%;
+            padding: 0;
+            position: relative;
+        }
+
+        .fade-left img{
+            width: 40%;
+            height: 60vh;
+        }
+
+        .fade-left h1{
+            margin-left: 50%;
+            color: #ff3753;
+        }
+
+        .fade-right{
+          margin-top: 15%;
+          margin-right: 1%;
+        }
+
+        .fade-right img{
+            margin-left: 45%;
+        }
+
+        .fade-right h1{
+            color:#ff3753;
+        }
+
+        .fade-right1{
+            margin-top: 20%;
+            margin-left: 5%;
+        }
+
+        .fade-right1 h1{
+            margin-left: 40%;
+        }
+
+        .fade-right1 img{
+            width: 40%;
+        }
+    
+        .fade-up{
+          margin-left: 10%;
+          margin-top: 15%;
+        }
+
+        .fade-up h1{
+            margin-left: 50%;
+            color: #ff3753;
+        }
+
+        .fade-up img{
+            float: left;
+            width: 60%;
+        }
+
+        .Span{
+            color: #ff3753;
+        }
+
+        .learn{
+            margin-top: 5%;
+            margin-bottom: 10%;
+            margin-left: 15%;
+        }
+
+        .features{
+            margin-top: 20%;
+            margin-bottom: 2%;
+            margin-left: 40%;
+        }
+        
+        h2{
+            color: #000;
+            font-size: 30px;
+        }
+
+        .features1{
+            margin-top: 60%;
+            margin-bottom: 2%;
+            margin-left: 40%;
+        }
+
+    </style>
+
+    <div class="container" >
+        <h1>Learn About <br> <span>BlockChain</span></h1>
+        <a href="BriefBlockChain.html"><button class="common-btn">LEARN MORE</button></a>
+        <img src="Images/BlockChain.gif" alt="">
+    </div>
+
+    <img class="Down-Arrow" src="Images/Down-Arrow.gif" alt="">
+
+    <h1 class="learn">We Will <span class="Span">Learn</span> About</h1>
+
+    <div class="fade-right1">
+        <div data-aos="fade-left">
+            <h1>What Is BlockChain</h1>
+            <img src="Images/What-is-blockchain.gif" alt="">
+        </div>
+    </div>
+
+    <h2 class="features">Features of <span class="Span">BlockChain</span></h2>
+
+    <div class="fade-left">
+        <div data-aos="fade-right">
+            <h1>Security</h1>
+            <img src="Images/cybersecurity.gif" alt="">
+        </div>
+    </div>
+
+    <div class="fade-right">
+        <div data-aos="fade-left">
+            <h1>Capacity</h1>
+            <img src="Images/Capacity.gif" alt="">
+        </div>
+    </div>
+
+    <div class="fade-up">
+        <div data-aos="fade-right">
+            <h1>Privacy</h1>
+            <img src="Images/Privacy.gif" alt="">
+        </div>
+    </div>
+
+    <h2 class="features1">Structure Of <span class="Span">BlockChain</span></h2>
+
+    <div class="fade-right">
+        <div data-aos="fade-left">
+            <h1 >Structure</h1>
+            <img style="width: 30%; margin-left: 50%;" src="Images/Structure-of-blockchain.gif" alt="">
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+        AOS.init();
+    </script>
+
+    <script>
+
+        var loader = document.getElementById("preloader");
+
+        window.addEventListener("load", function(){
+            loader.style.display = "none";
+        })
+
+    </script>
+
+
+</body>
+</html>

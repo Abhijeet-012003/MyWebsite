@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="preloader"></div>
+
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        html{
+            background-color: #fff;
+            color: rgb(44, 44, 44);
+        }
+
+        #preloader{
+            background: #000 url(Images/lazy3.gif) no-repeat center center;
+            background-size: 20%;
+            height: 100vh;
+            width: 100%;
+            position: fixed;
+            z-index: 100;
+        }
+
+        #header{
+            height: 100vh;
+            background-position:right;
+            background-size: cover;
+        }
+
+        .background-img{
+            width: 60%;
+            float: right;
+        }
+
+        .container{
+            margin-right: 100px;
+            margin-left: 100px;
+        }
+
+        .logo{
+            margin-top: 30px;
+            width: 100px;
+        }
+
+        .header-text{
+            max-width: 350px;
+            margin-top: 140px;
+        }
+
+        h1{
+            font-size: 34px;
+        }
+
+        .square{
+            height: 12px;
+            width: 12px;
+            display: inline-block;
+            background: #ff3753;
+            margin: 15px 0;
+        }
+
+        .common-btn{
+            padding: 18px 40px;
+            background: transparent;
+            outline: none;
+            font-weight: bold;
+            border: 2px solid #ff3753;
+        }
+
+        p{
+            font-size: 15px;
+            line-height: 18px;
+            color: #777;
+        }
+
+        li{
+            font-size: 15px;
+            line-height: 18px;
+            color: #777;
+        }
+
+        .header-text button{
+            margin-top: 20px;
+            margin-bottom: 60px;
+        }
+
+        .line1{
+            width: 15px;
+            height: 15px;
+            background: #ff3753;
+            display: inline-block;
+        }
+
+        .line2{
+            width: 80px;
+            height: 1px;
+            background: #ff3753;
+            display: inline-block;
+        }
+
+        .line3{
+            width: 60px;
+            height: 1px;
+            background: #ff3753;
+            display: inline-block;
+        }
+
+        .line{
+            line-height: 8px;
+        }
+
+        #sideNav{
+            width: 350px;
+            height: 100vh;
+            position: fixed;
+            right: -350px;
+            top: 0;
+            background:#ff3753;
+            z-index: 2;
+            transition: 1s;
+        }
+
+        nav ul li{
+            list-style: none;
+            margin: 50px 20px;
+        }
+
+        nav ul li a{
+            text-decoration: none;
+            color: #fff;
+            text-transform: uppercase;
+        }
+
+        .Li{
+            margin-top: 90px;
+        }
+
+        #menu-btn{
+            width: 30px;
+            position: fixed;
+            right: 65px;
+            top: 35px;
+            z-index: 2;
+            cursor: pointer;
+        }
+
+        /* about */
+
+        #about{
+            margin-top: 60px;
+            padding: 80px 0;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .about-left-col{
+            flex-basis: 50%;
+        }
+
+        .about-left-col img{
+            width: 100%;
+        }
+
+        .about-right-col{
+            flex-basis: 50%;
+            text-align: right;
+        }
+
+        .about-text{
+            max-width: 500px;
+            margin-right: 100px;
+            display: inline-block;
+        }
+
+        .about-text h2{
+            margin: 50px 0 10px;
+            font-size: 28px;
+            font-style: italic;
+        }
+
+        .about-text h3{
+            font-size: 20px;
+            font-style: italic;
+            color: #797977;
+        }
+
+        /* cources */
+
+        #cources, #last{
+            padding: 100px 0;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .cources-right-col{
+            flex-basis: 50%;
+        }
+
+        .cources-right-col img{
+            width: 100%;
+        }
+
+        .cources-left-col{
+            flex-basis: 50%;
+        }
+
+        .cources-text{
+            max-width: 500px;
+            margin-left: 100px;
+            display: inline-block;
+        }
+
+        #contact{
+            padding: 100px 0;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .contact-left-col{
+            flex-basis: 50%;
+        }
+
+        .contact-left-col img{
+            width: 100%;
+        }
+
+        /* features */
+
+        .h1{
+            text-align: center;
+            padding: 20px;
+            font-style: italic;
+        }
+
+        #features{
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+
+        .features-row{
+            width: 80%;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .feature-col{
+            flex-basis: 25%;
+            text-align: center;
+        }
+
+        .feature-col img{
+            width: 100px;
+        }
+
+        .feature-col .Confidence{
+            width: 200px;
+        }
+
+        .feature-col h4{
+            margin-bottom: 15px;
+            font-size: 20px;
+            font-weight: 400;
+        }
+
+        .features-btn{
+            margin: 80px auto 0;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+        }
+
+        .features-btn .line{
+            text-align: right;
+            display: inline-block;
+            margin-right: 25px;
+        }
+
+        /* footer */
+
+        .footer-row{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .footer-left-col{
+            flex-basis: 50%;
+        }
+
+        .footer-right-col{
+            flex-basis: 50%;
+        }
+
+        #footer{
+            padding: 50px 0 30px;
+        }
+
+        hr{
+            width: 100%;
+            border: 0;
+            border-top: 1px solid #ff3753;
+        }
+
+        .hr{
+            width: 100%;
+            border: 0;
+            border-top: 1px solid #fff;
+        }
+
+        .footer-row{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .footer-left-col{
+            flex-basis: 50%;
+        }
+
+        .footer-right-col{
+            flex-basis: 35%;
+        }
+
+        /* social-icons */
+
+        .social-icons{
+            width: 50px;
+            position: fixed;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            z-index: 1;
+        }
+
+        .social-icons img{
+            display: block;
+            width: 20px;
+            margin: 0 auto 20px;
+            cursor: pointer;
+        }
+
+        .Pros{
+            color: #7cbff6;
+        }
+
+        /* media */
+
+        @media only screen and (max-width: 770px){
+            #header{
+                background-image: none;
+            }
+
+            .container{
+            margin-right: 50px;
+            margin-left: 50px;
+            }
+
+            .logo{
+                margin-top: 27px;
+                width: 70px;
+            }
+
+            .header-text{
+                margin-top: 100px;
+            }
+
+            h1{
+                font-size: 25px;
+            }
+
+            #menu-btn{
+            width: 20px;
+            right: 40px;
+            }
+
+            .common-btn{
+            padding: 10px 16px;
+           }
+
+           social-icons img{
+            width: 14px;
+            margin: 15px auto;
+           }
+
+           .about-left-col, .about-right-col {
+            flex-basis: 100%;
+           }
+
+           .about-text{
+            margin: 50px 50px 0px;
+            display: inline-block;
+            }
+
+            .about-text h2{
+                font-size: 18px;
+                font-style: italic;
+            }
+
+            .feature-col{
+                flex-basis: 100%;
+                margin-bottom: 20px;
+            }
+            .cources-left-col{
+                flex-basis: 100%;
+                margin-right: 100px;
+            }
+
+            .cources-right-col{
+                flex-basis: 100%;
+                margin-top: 70px;
+            }
+        }
+
+
+
+</style>
+    
+    <section id="header">
+        <div class="container">
+            <img src="Images/blockChain-background.png" alt="" class="background-img">
+            <img src="images/logo.png" class="logo">
+            <div class="header-text">
+                <h1>What is BlockChain</h1>
+                <span class="square"></span>
+                <p>A blockchain is a distributed database that is shared among the nodes of a computer network. As a database, a blockchain stores information electronically in digital format. Blockchains are best known for their crucial role in cryptocurrency systems, such as Bitcoin, for maintaining a secure and decentralized record of transactions. The innovation with a blockchain is that it guarantees the fidelity and security of a record of data and generates trust without the need for a trusted third party.  </p>
+                <a href="BriefBlockChain1.html"><button class="common-btn">Learn More</button></a>
+                <div class="line">
+                    <span class="line1"></span><br>
+                    <span class="line2"></span><br>
+                    <span class="line3"></span><br>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- about -->
+
+    <section id="about">
+        <div class="about-left-col">
+            <img src="images/StructureOfBlockChain.jpg" alt="">
+        </div>
+        <div class="about-right-col">
+            <div class="about-text">
+                <h1>Structure of BlockChain</h1>
+                <span class="square"></span>
+                <p>The blockchain gets its name from its underlying structure. The blockchain is organized as a series of “blocks” that are “chained” together. Understanding blockchain security requires understanding how the blockchain is put together. This requires knowing what the blocks and chains of blockchain are and why they are designed the way that they are. <br><br> Inside the blockchain block &bull; <br> Inside the blockchain header &bull;<br> Blockchain bodies and Merkle trees &bull;<br> The blocks' “chains” &bull; </p>
+                <br><br>
+
+                <div class="line">
+                    <span class="line1"></span><br>
+                    <span class="line2"></span><br>
+                    <span class="line3"></span><br>
+                </div>
+
+                <h2> "[Blockchain] is the biggest opportunity set we can think of over the next decade or so."</h2>
+                <h3>-----Bob Greifeld</h3>
+                <br><br>
+
+                <a href="BrifBlockChain2.html"><button class="common-btn">Learn More</button></a>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- features -->
+
+    <section id="features">
+
+        <h1 class="h1">Features Of BlockChain</h1>
+
+        <div class="features-row">
+            <div class="feature-col">
+                <img src="images/Security.png" alt="">
+                <h4>Security</h4>
+                <p>Cryptography is an essential element in blockchain technology. Thus, providing security over the information stored in the blockchain and the information shared between the network nodes. To operate on the network, it is necessary to have a set of valid asymmetric keys to operate on the corresponding blockchain.</p>
+            </div>
+            <div class="feature-col">
+                <img class="Confidence" src="images/Confidence.jpg" alt="">
+                <h4>Confidence</h4>
+                <p>Confidence in the operation of the blockchain is the characteristic that makes two people who do not trust each other carry out a transaction on the blockchain.</p>
+            </div>
+            <div class="feature-col">
+                <img src="images/Privacy.png" alt="">
+                <h4>Privacy</h4>
+                <p>Holders can use their cryptocurrencies through the rapidly developing tools and services. Converting and exchanging cryptocurrencies into dollars or euros is now possible.This characteristic is typical of public blockchains, where the blockchain addresses are not linked to the identities of the people who control each of the blockchain addresses. </p>
+            </div>
+        </div>
+
+        <div class="features-btn">
+            <div class="line">
+                <span class="line1"></span><br>
+                <span class="line2"></span><br>
+                <span class="line3"></span><br>
+            </div>
+            <a href="BreifBlockChain3.html"><button class="common-btn">Read More Features</button></a>
+        </div>
+    </section>
+
+    <!-- cources -->
+
+    <section id="cources">
+        <div class="cources-left-col">
+            <div class="cources-text">
+                <h1>How Does a Blockchain Work? </h1>
+                <br>
+                <span class="square"></span>
+                <br>
+               <p>Blockchain consists of three important concepts: blocks, nodes and miners.
+                <br><br>
+                &bull;Blocks
+                <br><br>
+                &bull;Miners
+                <br><br>
+                &bull;Nodes
+               </p>
+               <br><br>
+               <div class="line">
+                <span class="line1"></span><br>
+                <span class="line2"></span><br>
+                <span class="line3"></span><br>
+            </div>
+            <br><br>
+            <a href="BriefBlockChain4.html"><button class="common-btn">Learn More</button></a>
+            </div>
+        </div>
+        <div class="cources-right-col">
+            <img src="images/WorkingOfBlockChain.jpg" alt="">
+        </div>
+    </section>
+    
+
+    <!-- contact -->
+
+    <section id="contact">
+        <div class="about-left-col">
+            <img src="images/ProsandCons.jpg" alt="">
+        </div>
+        <div class="about-right-col">
+            <div class="about-text">
+                <h1>Pros and Cons of Blockchain </h1>
+                <span class="square"></span>
+                <br>
+                <p> <span class="Pros">Pros</span> &bull; <br> Improved accuracy by removing human involvement in verification &bull; <br> Cost reductions by eliminating third-party verification &bull; <br> Transactions are secure, private, and efficient &bull;<br><br> <span class="Pros">Cons</span> &bull;<br> Significant technology cost associated with mining bitcoin &bull; <br> Low transactions per second&bull; <br> Data storage limitations &bull; </p>
+                <br><br>
+
+                <div class="line">
+                    <span class="line1"></span><br>
+                    <span class="line2"></span><br>
+                    <span class="line3"></span><br>
+                </div>
+
+                <h2> "Every informed person needs to know about Bitcoin because it might be one of the world's most important developments."</h2>
+                <h3>-----Leon Louw</h3>
+                <br><br>
+
+                <a href="BriefBLockCHain5.html"><button class="common-btn">Learn More</button></a>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- cources -->
+
+    <section id="last">
+        <div class="cources-left-col">
+            <div class="cources-text">
+                <h1>Types Of BlockChain </h1>
+                <br>
+                <p>Currently, there are at least four types of blockchain networks</p>
+                <span class="square"></span>
+                <br>
+                <li>Public blockchains</li>
+                <li>Private blockchains</li>
+                <li>Hybrid blockchains</li>
+                <li>Consortium Blockchains </li>
+               <br><br>
+               <div class="line">
+                <span class="line1"></span><br>
+                <span class="line2"></span><br>
+                <span class="line3"></span><br>
+            </div>
+            <br><br>
+            <a href="BriefBlockChain6.html"><button class="common-btn">Learn More</button></a>
+            </div>
+        </div>
+        <div class="cources-right-col">
+            <img src="images/TypesOf3.jpg" alt="">
+        </div>
+    </section>
+
+    <!-- social-media-icons -->
+
+    <div class="social-icons">
+        <img src="images/facebook.png" alt="">
+        <img src="images/instagram.png" alt="">
+        <img src="images/linkedin.png" alt="">
+        <img src="images/twitter.png" alt="">
+    </div>
+
+    
+
+    <script>
+    
+        var loader = document.getElementById("preloader");
+    
+        window.addEventListener("load", function(){
+            loader.style.display = "none";
+        })
+    
+    </script> 
+    
+
+    <script>
+        var menuBtn = document.getElementById("menu-btn");
+        var sideNav = document.getElementById("sideNav");
+
+        sideNav.style.right = "-350px";
+        menuBtn.onclick = function(){
+            if(sideNav.style.right == "-350px"){
+                sideNav.style.right = "0";
+            }
+            else{
+                sideNav.style.right = "-350px"
+            }
+        }
+
+        var scroll = new SmoothScroll('a[href*="#"]');
+
+    </script>
+
+</body>
+</html>

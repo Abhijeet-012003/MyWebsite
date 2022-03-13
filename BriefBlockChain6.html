@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="stylesheet" href="Style.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="preloader"></div>
+    
+    <style>
+        *{
+             margin: auto;
+             background-color: #fff;
+             color: #ff3753;
+         }
+         
+         .container{
+             margin-top: 50px ;
+         }
+         
+         .container img{
+             width: 300px;
+             height: 300px;
+         }
+         
+         h2{
+             margin: 30px;
+             font-size: 34px;
+         }
+         
+         p{
+             color: rgb(88, 88, 88);
+         }
+         
+         hr{
+             color: #ff3753;
+         }
+         
+         .Img{
+             width: 300px;
+             height: 300px;
+             float: right;
+             margin-right: 40px;
+         }
+         
+         .square{
+             height: 12px;
+             width: 12px;
+             display: inline-block;
+             background: #ff3753;
+             margin: 15px 0;
+         }
+         
+         li{
+             color: #ff3753;
+         }
+         
+         .line1{ 
+                 width: 15px;
+                 height: 15px;
+                 background: #ff3753;
+                 display: inline-block;
+         }
+         
+         .line2{
+             width: 80px;
+             height: 1px;
+             background: #ff3753;
+             display: inline-block;
+         }
+         
+         .line3{
+             width: 60px;
+             height: 1px;
+             background: #ff3753;
+             display: inline-block;
+         }
+         
+         .line{
+             line-height: 8px;
+         }
+        
+        /*responsive*/
+        
+        
+
+    </style>
+
+    <div class="container">
+
+        <h2>Types Of BlockChain?</h2>
+
+        <hr>
+
+        <span class="square"></span>
+        
+        <img src="Images/Features.jpg" alt="" class="Img">
+
+        <div class="keypoints">
+            <ul>
+                <li>
+                    <p>Public Blockchains .</p>
+                </li>
+                <li>
+                    <p>Private Blockchains .</p>
+                </li>
+                <li>
+                    <p>Hybrid blockchains.</p>
+                </li>
+                <li>
+                    <p>Consortium Blockchains .</p>
+                </li>
+            </ul>
+
+            <br>
+            <hr>
+            <br>
+            
+            <ul>
+                <li>
+                    <h2>Public Blockchains</h2>
+                    <br>
+                    <p>Public blockchains are permissionless in nature, allow anyone to join, and are completely decentralized.  Public blockchains allow all nodes of the blockchain to have equal rights to access the blockchain, create new blocks of data, and validate blocks of data.</p>
+                    <p>You may have heard of popular public blockchains such as Bitcoin, Ethereum, and Litecoin.  On these public blockchains, the nodes “mine” for cryptocurrency by creating blocks for the transactions requested on the network by solving cryptographic equations.  In return for this hard work, the miner nodes earn a small amount of cryptocurrency. The miners essentially act as new era bank tellers that formulate a transaction and receive (or “mine”) a fee for their efforts.</p>
+                </li>
+                <li>
+                    <h2>Private Blockchains</h2>
+                    <br>
+                    <p>Private blockchains, which may also be referred to as managed blockchains, are permissioned blockchains controlled by a single organization. In a private blockchain, the central authority determines who can be a node.  The central authority also does not necessarily grant each node with equal rights to perform functions.  Private blockchains are only partially decentralized because public access to these blockchains is restricted.  Some examples of private blockchains are the business-to-business virtual currency exchange network Ripple and Hyperledger, an umbrella project of open-source blockchain applications.</p>
+                </li>
+                <img src="Images/Features2.jpg" alt="" class="Img">
+                <li>
+                    <h2>Hybrid blockchains</h2>
+                    <p>Hybrid blockchains are blockchains that are controlled by a single organization, but with a level of oversight performed by the public blockchain, which is required to perform certain transaction validations.  An example of a hybrid blockchain is IBM Food Trust, which was developed to improve efficiency throughout the whole food supply chain. We will discuss IBM Food Trust in more detail in an upcoming article in this series.</p>
+                </li>
+                <li>
+                    <h2>Consortium Blockchains </h2>
+                    <p>Consortium blockchains are permissioned blockchains governed by a group of organizations, rather than one entity, as in the case of the private blockchain.  Consortium blockchains, therefore, enjoy more decentralization than private blockchains, resulting in higher levels of security.  However, setting up consortiums can be a fraught process as it requires cooperation between a number of organizations, which presents logistical challenges as well as potential antitrust risk (which we will examine in an upcoming article). Further, some members of supply chains may not have the needed technology nor the infrastructure to implement blockchain tools, and those that do may decide the upfront costs are too steep a price to pay to digitize their data and connect to other members of the supply chain.
+
+                        A popular set of consortium blockchain solutions for the financial services industry and beyond has been developed by the enterprise software firm R3.  In the supply chain sector, CargoSmart has developed the Global Shipping Business Network Consortium, a not-for-profit blockchain consortium which aims to digitalize the shipping industry and allow maritime industry operators to work more collaboratively.</p>
+                </li>
+            </ul>
+
+        <hr class="hr">
+        
+    </div>
+
+    
+    <script>
+    
+        var loader = document.getElementById("preloader");
+    
+        window.addEventListener("load", function(){
+            loader.style.display = "none";
+        })
+    
+    </script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+</body>
+</html>

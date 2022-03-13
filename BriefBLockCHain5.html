@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="stylesheet" href="Style.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="preloader"></div>
+    
+    <style>
+        *{
+             margin: auto;
+             background-color: #fff;
+             color: #ff3753;
+         }
+         
+         .container{
+             margin-top: 50px ;
+         }
+         
+         .container img{
+             width: 300px;
+             height: 300px;
+         }
+         
+         h2{
+             margin: 30px;
+             font-size: 34px;
+         }
+         
+         p{
+             color: rgb(88, 88, 88);
+         }
+         
+         hr{
+             color: #ff3753;
+         }
+         
+         .Img{
+             width: 300px;
+             height: 300px;
+             float: right;
+             margin-right: 40px;
+         }
+         
+         .square{
+             height: 12px;
+             width: 12px;
+             display: inline-block;
+             background: #ff3753;
+             margin: 15px 0;
+         }
+         
+         li{
+             color: #ff3753;
+         }
+         
+         .line1{ 
+                 width: 15px;
+                 height: 15px;
+                 background: #ff3753;
+                 display: inline-block;
+         }
+         
+         .line2{
+             width: 80px;
+             height: 1px;
+             background: #ff3753;
+             display: inline-block;
+         }
+         
+         .line3{
+             width: 60px;
+             height: 1px;
+             background: #ff3753;
+             display: inline-block;
+         }
+         
+         .line{
+             line-height: 8px;
+         }
+        
+        /*responsive*/
+        
+        
+
+    </style>
+
+    <div class="container">
+
+        <h2>Pros and Cons of Blockchain </h2>
+
+        <hr>
+
+        <span class="square"></span>
+
+        <div class="keypoints">
+            <h2>Pros</h2>
+            <ul>
+                <li>
+                    <p>Improved accuracy by removing human involvement in verification.</p>
+                </li>
+                <li>
+                    <p>Cost reductions by eliminating third-party verification.</p>
+                </li>
+                <img src="Images/Features.jpg" alt="" class="Img">
+                <li>
+                    <p>Transactions are secure, private, and efficient.</p>
+                </li>
+                <li>
+                    <p>Greater Transparency</p>
+                </li>
+                <li>
+                    <p>Accounting</p>
+                </li>
+            </ul>
+            
+
+            <h2>Cons</h2>
+            <ul>
+                <li>
+                    <p>Significant technology cost associated with mining bitcoin.</p>
+                </li>
+                <li>
+                    <p>Low transactions per second.</p>
+                </li>
+                <li>
+                    <p>Data storage limitations .</p>
+                </li>
+                <li>
+                    <p>Large energy consum­ption</p>
+                </li>
+                <li>
+                    <p>Volatility</p>
+                </li>
+            </ul>
+
+            <br>
+            <hr>
+        
+    </div>
+
+    
+    <script>
+    
+        var loader = document.getElementById("preloader");
+    
+        window.addEventListener("load", function(){
+            loader.style.display = "none";
+        })
+    
+    </script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+</body>
+</html>

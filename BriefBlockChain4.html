@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="stylesheet" href="Style.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="preloader"></div>
+    
+    <style>
+        *{
+             margin: auto;
+             background-color: #fff;
+             color: #ff3753;
+         }
+         
+         .container{
+             margin-top: 50px ;
+         }
+         
+         .container img{
+             width: 300px;
+             height: 300px;
+         }
+         
+         h2{
+             margin: 30px;
+             font-size: 34px;
+         }
+         
+         p{
+             color: rgb(88, 88, 88);
+         }
+         
+         hr{
+             color: #ff3753;
+         }
+         
+         .Img{
+             width: 300px;
+             height: 300px;
+             float: right;
+             margin-right: 40px;
+         }
+         
+         .square{
+             height: 12px;
+             width: 12px;
+             display: inline-block;
+             background: #ff3753;
+             margin: 15px 0;
+         }
+         
+         li{
+             color: #ff3753;
+         }
+         
+         .line1{ 
+                 width: 15px;
+                 height: 15px;
+                 background: #ff3753;
+                 display: inline-block;
+         }
+         
+         .line2{
+             width: 80px;
+             height: 1px;
+             background: #ff3753;
+             display: inline-block;
+         }
+         
+         .line3{
+             width: 60px;
+             height: 1px;
+             background: #ff3753;
+             display: inline-block;
+         }
+         
+         .line{
+             line-height: 8px;
+         }
+        
+         #preloader{
+            background: #fff url(Images/lazy3.gif) no-repeat center center;
+            background-size: 20%;
+            height: 100vh;
+            width: 100%;
+            position: fixed;
+            z-index: 100;
+        }
+        
+        /* responsive */
+
+        @media only screen and (max-width: 450px){
+
+            .container{
+                margin-left: 10px;
+            }
+
+            .container img{
+                margin-right: 30px;
+            }
+
+        }
+        
+        
+
+    </style>
+
+    <div class="container">
+
+        <h2>How Does a Blockchain Work?</h2>
+
+        <hr>
+
+        <p>Blockchain consists of three important concepts:</p>
+
+        <span class="square"></span>
+        
+        <img src="Images/—Pngtree—bitcoin cryptocurrency_6599591.png" alt="" class="Img">
+
+        <div class="keypoints">
+            <ul>
+                <li>
+                    <p>Blocks.</p>
+                </li>
+                <li>
+                    <p>Miners .</p>
+                </li>
+                <li>
+                    <p>Node.</p>
+                </li>
+            </ul>
+            <br>
+                <div class="line">
+                    <span class="line1"></span><br>
+                    <span class="line2"></span><br>
+                    <span class="line3"></span><br>
+                </div>
+                <br>
+        </div>
+
+        <div class="defination">
+            <h2>Blocks</h2>
+
+            <hr>
+            <br>
+
+            <p>Every chain consists of multiple blocks and each block has three basic elements:</p>
+            <ul>
+                <li>
+                    The data in the block.
+                </li>
+                <li>
+                    A 32-bit whole number called a nonce. The nonce is randomly generated when a block is created, which then generates a block header hash. 
+                </li>
+                <li>
+                    The hash is a 256-bit number wedded to the nonce. It must start with a huge number of zeroes (i.e., be extremely small).
+                </li>
+            </ul>
+
+            <p>When the first block of a chain is created, a nonce generates the cryptographic hash. The data in the block is considered signed and forever tied to the nonce and hash unless it is mined.</p>
+
+        <div class="line">
+            <span class="line1"></span><br>
+            <span class="line2"></span><br>
+            <span class="line3"></span><br>
+        </div>
+
+        <br>
+        <br>
+
+        <h3>Miners</h3>
+
+        <br>
+        <hr>
+        <br>
+
+        <p>Miners create new blocks on the chain through a process called mining.</p>
+        <img src="Images/—Pngtree—cryptocurrency mining concept with people_5334455.png" alt="" class="Img">
+        <p>In a blockchain every block has its own unique nonce and hash, but also references the hash of the previous block in the chain, so mining a block isn't easy, especially on large chains.</p>
+        <p>Miners use special software to solve the incredibly complex math problem of finding a nonce that generates an accepted hash. Because the nonce is only 32 bits and the hash is 256, there are roughly four billion possible nonce-hash combinations that must be mined before the right one is found. When that happens miners are said to have found the "golden nonce" and their block is added to the chain. </p>
+        <p>Making a change to any block earlier in the chain requires re-mining not just the block with the change, but all of the blocks that come after. This is why it's extremely difficult to manipulate blockchain technology. Think of it as "safety in math" since finding golden nonces requires an enormous amount of time and computing power.</p>
+        <p>When a block is successfully mined, the change is accepted by all of the nodes on the network and the miner is rewarded financially.</p>
+
+        <br>
+
+        <h3>Node</h3>
+
+        <br>
+        <hr>
+        <br>
+
+        <p>One of the most important concepts in blockchain technology is decentralization. No one computer or organization can own the chain. Instead, it is a distributed ledger via the nodes connected to the chain. Nodes can be any kind of electronic device that maintains copies of the blockchain and keeps the network functioning. </p>
+        <p>Every node has its own copy of the blockchain and the network must algorithmically approve any newly mined block for the chain to be updated, trusted and verified. Since blockchains are transparent, every action in the ledger can be easily checked and viewed. Each participant is given a unique alphanumeric identification number that shows their transactions.</p>
+        <p>Combining public information with a system of checks-and-balances helps the blockchain maintain integrity and creates trust among users. Essentially, blockchains can be thought of as the scalability of trust via technology. </p>
+        
+        <br>
+
+        <hr class="hr">
+        
+    </div>
+
+    
+    <script>
+    
+        var loader = document.getElementById("preloader");
+    
+        window.addEventListener("load", function(){
+            loader.style.display = "none";
+        })
+    
+    </script>
+
+    <script>
+        
+        var loader = document.getElementById("preloader");
+    
+        window.addEventListener("load", function(){
+            loader.style.display = "none";
+        })
+    
+    </script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+</body>
+</html>
